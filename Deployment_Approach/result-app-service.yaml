@@ -6,11 +6,11 @@ metadata:
     name: result-service
     app: demo-voting-app
 spec:
-  type: NodePort
+  type: NodePort  # Makes service accessible from outside the cluster
   ports:
-    - port: 80
-      targetPort: 80
-      nodePort: 30005
+    - port: 80          # Internal cluster port
+      targetPort: 80    # Container port
+      nodePort: 30005   # External port (must be in range 30000-32767)
   selector:
     name: result-app-pod
     app: demo-voting-app
