@@ -14,7 +14,7 @@ The voting application consists of five main components:
 - **Redis**: A Redis queue that collects votes
 - **PostgreSQL**: A PostgreSQL database that stores voting results
 
-## Kubernetes Components
+## Deploying voting app on Kubernetes with Deployments
 
 ![Voting App Kubernetes Components](./images/v2.png)
 
