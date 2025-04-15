@@ -141,7 +141,7 @@ kubectl get deployments
 This project uses the following container images:
 - Voting App: `kodekloud/examplevotingapp_vote:v1`
 - Result App: `kodekloud/examplevotingapp_result:v1`
-- Worker: `kodekloud/examplevotingapp_worker:v1`
+- Worker: `dockersamples/examplevotingapp_worker`
 - Redis: Standard Redis image
 - PostgreSQL: Standard PostgreSQL image
 
