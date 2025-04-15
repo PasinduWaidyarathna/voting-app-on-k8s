@@ -1,16 +1,16 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: voting-service
+  name: voting-service  
   labels:
     name: voting-service
     app: demo-voting-app
 spec:
-  type: NodePort
+  type: NodePort  # Makes service accessible from outside the cluster
   ports:
-    - port: 80
-      targetPort: 80
-      nodePort: 30004
+    - port: 80           # Internal cluster port
+      targetPort: 80     # Container port
+      nodePort: 30004    # External port (must be in range 30000-32767)
   selector:
     name: voting-app-pod
     app: demo-voting-app
