@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: db
+  name: db  # Important: This name must be 'db' as it's referenced in the application
   labels:
     name: postgres-service
     app: demo-voting-app
@@ -12,3 +12,4 @@ spec:
   selector:
     name: postgres-pod
     app: demo-voting-app
+  # No type specified means ClusterIP (internal only)
