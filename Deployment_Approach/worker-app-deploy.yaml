@@ -6,7 +6,7 @@ metadata:
     name: worker-app-deploy
     app: demo-voting-app
 spec:
-  replicas: 1
+  replicas: 1  # Can be scaled up to process more votes
   selector:
     matchLabels:
       name: worker-app-pod
@@ -21,4 +21,5 @@ spec:
     spec:
       containers:
         - name: worker-app
-          image: dockersamples/examplevotingapp_worker
+          image: dockersamples/examplevotingapp_worker  # Processes votes from Redis to PostgreSQL
+          # No ports exposed as worker doesn't need direct access
